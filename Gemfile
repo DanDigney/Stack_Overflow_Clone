@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
 # PostgreSQL driver
-gem 'pg'
+gem 'pg', '~> 1.1.0'
 
 # Sinatra driver
 gem 'sinatra', '~> 1.0'
 gem 'sinatra-contrib'
 
-gem 'activesupport', '~>4.2.0'
-gem 'activerecord', '~>4.2.0'
+gem 'activesupport', '~> 5.2.3'
+gem 'activerecord', '~> 5.2.3'
 
 gem 'rake'
 
