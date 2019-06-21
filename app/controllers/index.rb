@@ -1,3 +1,4 @@
 get '/' do 
-  ":D"
+  @user = User.first.user_name
+  erb :'index'
 end
