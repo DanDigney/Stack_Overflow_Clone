@@ -22,6 +22,6 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
+  gem 'faker', '~> 1.9'
   gem 'pry-byebug'
 end
