@@ -7,5 +7,11 @@ def logged_in?
 end
 
 def acceptable_password?
-  params[:user][:password].length >= 3
+  plength = params[:password].length
+  (plength >= 6) && (plength <= 25)
+end
+
+def acceptable_email?
+  reggie = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  return true if params[:email] =~ reggie
 end
