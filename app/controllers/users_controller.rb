@@ -1,1 +1,3 @@
-users_controller.rb
+get '/users/new' do 
+  erb :'/users/new'
+end
