@@ -1,4 +1,4 @@
 get '/' do 
-  @user = User.first.user_name
+  @users = User.all
   erb :'index'
 end
