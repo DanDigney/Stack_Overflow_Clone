@@ -8,16 +8,6 @@ header {
   background-color: gray;
 }
 
-nav {
-  position: relative;
-  float: right;
-  display: flex;
-  padding-right: 2%;
-  padding-top: 5%;
-  font-weight: bold;
-  font-size: 20px;
-}
-
 .logo {
   position: relative;
   display: flex;
@@ -30,9 +20,22 @@ nav {
 }
 
 .nav-links {
-  text-decoration-line: none;
+  position: relative;
+  float: right;
+  display: flex;
+  padding-right: 2%;
+  padding-top: 5%;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
   color: blue;
   margin-right: 10px;
+}
+
+.nav-links > input {
+  background: none;
+  border: none;
+  margin-top: -4%;
 }
 
 .nav-links:hover {

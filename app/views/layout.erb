@@ -11,20 +11,21 @@
 </head>
 <body>
   <a href="/" class='logo'>Stack Overflow Clone</a>
-
   <header>
     <nav>
       <a href="/questions/new" class="nav-links">Post a Question</a>
-        <% if session[:id] != nil %>
-         <h3 class="nav-links">Log Out</h3>
-         <h3 class="nav-links"><%= current_user.user_name %></h3>
-        <% else %>
-          <a href="/sessions/new" class="nav-links">Login</a>
-          <a href="/users/new" class="nav-links">Sign Up</a>
-        <% end %>
+      <% if session[:id] != nil %>
+        <form action="/sessions/<%=  current_user.id %>" method="post" class="nav-links">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Logout" class="nav-links">
+        </form>
+        <a href="/" class="nav-links"><%= current_user.user_name %></a>
+      <% else %>
+        <a href="/sessions/new" class="nav-links">Login</a>
+        <a href="/users/new" class="nav-links">Sign Up</a>
+      <% end %>
     </nav>
   </header>
-
-  <%= yield %>
+  <%= yield %> <!-- Yield block -->
 </body>
 </html>
