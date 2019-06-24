@@ -26,6 +26,15 @@
       <% end %>
     </nav>
   </header>
+  <div class="error_list">
+    <% if !@errors.nil? %>
+      <ul>
+        <% @errors.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
   <%= yield %> <!-- Yield block -->
 </body>
 </html>

@@ -9,7 +9,7 @@ post '/sessions' do
     session[:id] = @user.id
     redirect '/'
   else
-    @errors = ["user name and password don't match"]
+    @errors = ["Incorrect User Name or Password."]
     erb :'/sessions/new'
   end
 end
