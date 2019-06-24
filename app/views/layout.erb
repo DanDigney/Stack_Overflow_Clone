@@ -10,16 +10,21 @@
   <title>:D Overflow Clone</title>
 </head>
 <body>
-  <nav>
-    <a class= "nav-links" href="/questions/new">Post a Question</a>
-      <% if session[:id] != nil %>
-       <h3 class= "nav-links" >Log Out</h3>
-       <h3 class= "nav-links" ><%= current_user.user_name %></h3>
-      <% else %>
-        <a class= "nav-links" href="/sessions/new">Login</a>
-        <a class= "nav-links" href="/users/new">Sign Up</a>
-      <% end %>
-  </nav>
+  <a href="/" class='logo'>Stack Overflow Clone</a>
+
+  <header>
+    <nav>
+      <a href="/questions/new" class="nav-links">Post a Question</a>
+        <% if session[:id] != nil %>
+         <h3 class="nav-links">Log Out</h3>
+         <h3 class="nav-links"><%= current_user.user_name %></h3>
+        <% else %>
+          <a href="/sessions/new" class="nav-links">Login</a>
+          <a href="/users/new" class="nav-links">Sign Up</a>
+        <% end %>
+    </nav>
+  </header>
+
   <%= yield %>
 </body>
 </html>
