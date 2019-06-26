@@ -2,8 +2,8 @@
 User.destroy_all
 Question.destroy_all 
 Answer.destroy_all
+Comment.destroy_all
 Vote.destroy_all
-Comment.destroy_all 
 
 require 'faker'
 
