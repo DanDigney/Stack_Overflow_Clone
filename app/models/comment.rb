@@ -5,4 +5,8 @@ class Comment < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :commentable, polymorphic: true
+
+  def vote_count
+    self.votes.pluck(:value).reduce(:+)
+  end
 end

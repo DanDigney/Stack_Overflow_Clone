@@ -6,4 +6,8 @@ class Answer < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :question
+
+  def vote_count
+    self.votes.pluck(:value).reduce(:+)
+  end
 end
