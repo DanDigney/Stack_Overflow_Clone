@@ -7,7 +7,7 @@ gem 'pg', '~> 1.1.0'
 gem 'activerecord', '~> 5.1.0'
 gem 'activesupport', '~> 5.1.0'
 
-gem 'rake', '~> 12.3.0'
+gem 'rake', '~> 12.3.3'
 gem 'shotgun', '~> 0.9.2'
 
 gem 'bcrypt', '~> 3.1'
