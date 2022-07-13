@@ -4,8 +4,8 @@ gem 'sinatra', '~> 2.0'
 gem 'sinatra-contrib', '~> 2.0'
 
 gem 'pg', '~> 1.1.0'
-gem 'activerecord', '~> 5.1.0'
-gem 'activesupport', '~> 5.1.0'
+gem 'activerecord', '~> 7.0.3'
+gem 'activesupport', '~> 7.0.3'
 
 gem 'rake', '~> 12.3.0'
 gem 'shotgun', '~> 0.9.2'
